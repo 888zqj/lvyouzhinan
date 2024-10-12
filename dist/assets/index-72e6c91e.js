@@ -1,0 +1,12 @@
+import{h as P,q as F,v as a,s as N,o as u,b as d,l,x as T,H as V,k as w,T as $,y as k,z,e as b,A as R,C as O,t as Q,E as W,B as X,D as Y}from"./index-de307950.js";import{c as j}from"./controlDetail-9c35d446.js";import{o as G,r as J,w as K,a as U}from"./waterFall-e8d9942f.js";const Z={key:0,class:"Empty"},ee={key:1},te=["infinite-scroll-disabled"],ae={key:0,class:"overlay"},oe={__name:"index",setup(se){const m=F().query.query,f=j(),o=a([]),r=a(!0),y=a(0),c=a({}),_=a([]),g=async e=>{const t=await k({offset:e,query:m});o.value=t.info,K(y,c,_,o),r.value=!1},C=async()=>{r.value=!0;const e=o.value.length,s=(await k({offset:e,query:m})).info;s.length===0?r.value=!0:(o.value=[...o.value,...s],U(_,c,s),r.value=!1)},x=f.detail,i=a(!1),v=a(0),p=a(0),h=a(null),E=async e=>f.getDetail(e),D=async(e,t,s)=>{window.history.pushState({},"",`/explore/${e}`),v.value=t,p.value=s,await E(e),i.value=!0},B=e=>f.afterDoComment(e),q=()=>{window.history.pushState({},"","/"),i.value=!1,document.title="欢迎来到旅游印记!"};G(h,()=>{window.history.pushState({},"","/"),i.value=!1,document.title="欢迎来到旅游印记!"});let n=null;const S=()=>{n=document.createElement("style"),n.innerHTML=`@keyframes scale-up-center {
+          0% {
+            transform: scale(0.5);
+            transform-origin: ${v.value}px ${p.value}px;
+          }
+          10% {
+            transform: scale(0.5);
+          }
+          100% {
+            transform: scale(1);
+          }
+       }`,document.head.appendChild(n)},A=e=>{e.style="background-color: #fff";const t=e.querySelector(".backPage");t.style.display=""},L=e=>{const t=e.querySelector(".backPage");t.style.display="none",e.style="background-color: transparent"},H=()=>{n&&(document.head.removeChild(n),n=null)};return N(async()=>{await g(0),J(y,c,_,o)}),(e,t)=>{const s=W,I=X,M=Y;return o.value.length===0?(u(),d("div",Z,[l(s,{description:"没有帖子..."})])):(u(),d("div",ee,[T((u(),d("div",{"infinite-scroll-disabled":r.value,"infinite-scroll-distance":200},[l(V,{card_columns:c.value,onShowDetail:D,ref:"homeCardRef"},null,8,["card_columns"])],8,te)),[[M,C]]),l($,{name:"fade",onBeforeEnter:S,onAfterEnter:A,onBeforeLeave:L,onAfterLeave:H},{default:w(()=>[i.value?(u(),d("div",ae,[z("button",{style:{display:"none"},class:"backPage",onClick:q},[l(I,null,{default:w(()=>[l(b(R))]),_:1})]),l(O,{detail:b(x),onAfterDoComment:B,ref_key:"overlay",ref:h},null,8,["detail"])])):Q("",!0)]),_:1})]))}}},ce=P(oe,[["__scopeId","data-v-12d9b5c3"]]);export{ce as default};

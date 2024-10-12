@@ -1,0 +1,1 @@
+import{v as n,a4 as c,af as m}from"./index-de307950.js";const f=()=>{const t=n({}),e=n([]),a=n("");return c(),{detail:t,comments:e,content:a,afterDoComment:()=>{t.value.commentCount+=1},getDetail:async o=>{const s=await m({id:o});t.value=s.info,document.title=t.value.title},SetComment:o=>{e.value=[...e.value,...o]}}};export{f as c};
